@@ -1,0 +1,8 @@
+node_modules
+*.log
+npm-debug.log*
+# Optional npm cache directory
+.npm
+Dockerfile
+.dockerignore
+.env
