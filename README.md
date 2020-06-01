@@ -32,7 +32,7 @@ Firstly, create  .env file. you just need
 If you want to start the app:
 * Make sure you have the `.env` files.
 * Install project dependencies : `npm install`
-* Run the project: `npm start`
+* Run the project: `npm start:dev`
 
 ## Running the project with docker
 * Building your image `docker build -t diana/api-rest .`
