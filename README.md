@@ -28,7 +28,7 @@ Firstly, create  .env file. you just need
 
 * `PORT`: To specify the port of the current app, e.g. `3000`.
 
-## Running the project
+## Running the project local
 If you want to start the app:
 * Make sure you have the `.env` files.
 * Install project dependencies : `npm install`
@@ -39,7 +39,7 @@ If you want to start the app:
 * `docker run -p 2000:3000 -d diana/api-rest`
 
 ## APIs
-* Get all `http://localhost:3000/api/developers`
+* GET all `http://localhost:3000/api/developers`
 * Create new POST `http://localhost:3000/api/developers` 
 ```
 {
@@ -53,8 +53,8 @@ If you want to start the app:
 	
 }
 ```
-* Delete `http://localhost:3000/api/developers/{id}`
-* Update `http://localhost:3000/api/developers/{id}`
+* DELETE `http://localhost:3000/api/developers/{id}`
+* UPDATE `http://localhost:3000/api/developers/{id}`
 ```
 {
         "name": "Juan Lopez",
@@ -71,3 +71,47 @@ If you want to start the app:
 
 ## Running the tests
 * Run the command: `npm tests`
+
+## Deploy with heroku
+* [Heroku](https://dashboard.heroku.com/apps)
+* create a new app.
+* Select Deployment method (Heroku CLI, GitHub, or Container Registry).
+* if you selected Github, so select branch to deploy.
+
+## Deploy with Heroku CLI
+* Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) `brew tap heroku/brew && brew install heroku`.
+* You need login `heroku login`
+* `heroku create`
+* `heroku open`
+* If you want to see logs run `heroku logs --tail` 
+
+## APIs with heroku
+`https://developer-api.herokuapp.com/api/developers`
+* GET all `https://developer-api.herokuapp.com/api/developers`
+* Create new POST `https://developer-api.herokuapp.com/api/developers` 
+```
+{
+        "name": "Juan Lopez",
+        "link_github": "https://github.com/Juan",
+        "technologies": [
+            "Java",
+            "Git",
+            "CSS"
+        ]
+	
+}
+```
+* DELETE `https://developer-api.herokuapp.com/api/developers/{id}`
+* PUT `https://developer-api.herokuapp.com/api/developers/{id}`
+```
+{
+        "name": "Juan Lopez",
+        "link_github": "https://github.com/Juan",
+        "technologies": [
+            "JavaScript",
+            "Git",
+            "CSS"
+        ]
+	
+}
+```
